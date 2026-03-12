@@ -1,5 +1,39 @@
 install the docker
 insatll intelj
+install the springboot initialiser and open in the intel
+for example run the hello world web
 in the docker insatl the openjar 
 creat the container in the docker
 creat the sample web app using the intej
+in the poxml give the  <build> <filename>rest-demo</filename>
+yo can so specify the version for jar if it is not woking in the poxml
+create the mvn package using the right side terminal
+the jar file will be created in the target
+we will take the jar file put in the container
+creat the images for the conatiner
+by creting the image it will not run becuse the cmd run the jshell so we whant to change the cmd
+by change thing the cmd it will not run we should ron with the port number
+
+
+
+
+
+
+to run the jar file commends
+java -jar "give the path form the target"
+docker exec "container id"  (list os file will appier we will use the tmp)
+
+docker exec container id ls /tmp  (list of the folder)
+docker cp target/rest-demo.jar container id:/tmp (used to copy)
+docker exec container id or name ls /tmp (the file we should see)
+docker commite "container id" and "the image name":vesrion (v)
+docker image run
+docker --commit='CMD ["java","-jar","/tmp/rest-demo.jar"] ("container id" "and the image name :version")
+docker ru -p 8080:8080  image name :v
+
+
+
+
+
+
+   
