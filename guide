@@ -13,6 +13,11 @@ we will take the jar file put in the container
 creat the images for the conatiner
 by creting the image it will not run becuse the cmd run the jshell so we whant to change the cmd
 by change thing the cmd it will not run we should ron with the port number
+we cant run the multiple container we create the docker file
+FROM openjdk:22-openjdk (which jar u used ) in the docker
+ADD target/rest-demo.jar rest-demo.jar
+ENTRYPOINT ["java","-jar","/rest-demo.jar"]
+creat the image
 
 
 
@@ -29,8 +34,9 @@ docker exec container id or name ls /tmp (the file we should see)
 docker commite "container id" and "the image name":vesrion (v)
 docker image run
 docker --commit='CMD ["java","-jar","/tmp/rest-demo.jar"] ("container id" "and the image name :version")
+docker run -p 8080:8080 docker_project:v4 java -jar /tmp/rest-demo.jar
 docker ru -p 8080:8080  image name :v
-
+docker build -t image name with the v . (. reffers tto directry same meanins . other wise give the path)
 
 
 
